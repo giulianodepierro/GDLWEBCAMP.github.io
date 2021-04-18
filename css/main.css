@@ -1,60 +1,68 @@
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
+
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
 
-/* ==========================================================================
+
+/* 
+                        ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
+
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* Vendor-prefixed and regular ::selection selectors cannot be combined:
+* https://stackoverflow.com/a/16982510/7133471
+*
+* Customize the background color to match your design.
+*/
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+ ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+ ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
+
 
 /*
- * A better looking default horizontal rule
- */
+* A better looking default horizontal rule
+*/
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
+
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+* Remove the gap between audio, canvas, iframes,
+* images, videos and the bottom of their containers:
+* https://github.com/h5bp/html5-boilerplate/issues/440
+*/
 
 audio,
 canvas,
@@ -62,53 +70,260 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
+
 /*
- * Remove default fieldset styles.
- */
+* Remove default fieldset styles.
+*/
 
 fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
+
 /*
- * Allow only vertical resizing of textareas.
- */
+* Allow only vertical resizing of textareas.
+*/
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
+
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+Browser Upgrade Prompt
+========================================================================== */
 
 .browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Author's custom styles
+========================================================================== */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'OpenSans', sans-serif;
+}
+
+
+/**Globales**/
+
+.contenedor {
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+    .contenedor {
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor {
+        width: 90px;
+        min-width: 1100px;
+    }
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    background-image: url(../img/encabezado.jpg);
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+}
+
+.contenido-header {
+    padding-top: 40px;
+}
+
+@media only screen and (min-width:768px) {
+    .contenido-header {
+        margin-top: 10px;
+    }
+}
+
+.redes-sociales {
+    text-align: center;
+}
+
+.redes-sociales a {
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.redes-sociales a:last-child {
+    margin-right: 0;
+}
+
+.informacion-evento {
+    text-align: center;
+    color: #ffffff;
+}
+
+.informacion-evento p {
+    margin: 0;
+    font-size: 20px;
+    display: inline;
+    text-transform: uppercase;
+}
+
+.informacion-evento p i {
+    color: #fe4918;
+    font-size: 2.4em;
+}
+
+@media only screen and (min-width:768px) {
+    .informacion-evento {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+
+.fecha {
+    float: left;
+}
+
+.ciudad {
+    float: right;
+    text-align: right;
+}
+
+.slogan {
+    text-transform: none!important;
+}
+
+.slogan span {
+    font-weight: bold;
+}
+
+.nombre-sitio h1 {
+    font-size: 5.9vw;
+    font-family: 'PT-Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+@media (min-width:768px) {
+    .nombre-sitio {
+        font-size: 11.5vw;
+        margin: 0;
+        line-height: 1;
+    }
+}
+
+.barra {
+    background-color: #353535;
+    padding: 5px;
+}
+
+.logo {
+    width: 80%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .logo img {
+        width: 33%;
+    }
+}
+
+
+/**Navegacion principal**/
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor .navegacion-principal {
+    display: none;
+}
+
+.navegacion-principal a {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1.4em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3 ease;
+}
+
+.navegacion-principal a:hover {
+    background-color: #fe4918;
+}
+
+.navegacion-principal a:last-of-type {
+    border: 2px solid #fe4918;
+    color: #fe4918;
+}
+
+.navegacion-principal a:last-of-type:hover {
+    color: #ffffff;
+}
+
+@media (min-width:768px) {
+    .contenedor .navegacion-principal {
+        display: block;
+        width: 67%;
+        float: right;
+        text-align: right;
+    }
+    .navegacion-principal a {
+        margin-right: 10px;
+        padding: 10px 20px;
+        display: inline-block;
+    }
+}
+
+
+/* ==========================================================================
+Helper classes
+========================================================================== */
+
 
 /*
- * Hide visually and from screen readers
- */
+* Hide visually and from screen readers
+*/
 
 .hidden {
-  display: none !important;
+    display: none !important;
 }
+
 
 /*
 * Hide only visually, but have it available for screen readers:
@@ -120,17 +335,18 @@ textarea {
 */
 
 .sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
 }
+
 
 /*
 * Extends the .sr-only class to allow the element
@@ -140,22 +356,24 @@ textarea {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
 }
+
 
 /*
 * Hide visually and from screen readers, but maintain layout
 */
 
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
+
 
 /*
 * Clearfix: contain floats
@@ -171,95 +389,96 @@ textarea {
 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
-  clear: both;
+    clear: both;
 }
 
+
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+Modify as content requires.
+========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+    /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
 }
+
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+Print styles.
+Inlined to avoid the additional HTTP request:
+https://www.phpied.com/delay-loading-your-print-css/
+========================================================================== */
 
 @media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+* Don't show links that are fragment identifiers,
+* or use the `javascript:` pseudo protocol
+*/
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+* Printing Tables:
+* https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+*/
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
-
