@@ -168,7 +168,7 @@ h2::after {
 }
 
 h3 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: #fe4918;
     font-family: 'PT-Sans', sans-serif;
     margin: 0;
@@ -185,14 +185,14 @@ h3 {
     font-size: 1.2em;
     margin-top: 20px;
     display: inline-block;
-    transition: all .3 ease;
+    transition: all .3s ease;
 }
 
-.boon:hover {
+.boton:hover {
     background-color: #e33000;
 }
 
-.float.right {
+.float-right {
     float: right;
 }
 
@@ -371,7 +371,7 @@ header {
 .menu-movil span {
     height: 8px;
     margin-bottom: 6px;
-    00 background-color: white;
+    background-color: white;
     display: block;
 }
 
@@ -464,12 +464,10 @@ header {
     border-bottom: none;
 }
 
-1 {
+.detalle-evento p {
     margin-bottom: 20PX;
     font-size: 20px;
 }
-
-.detalle-evento h3 {}
 
 
 /* ==========================================================================
