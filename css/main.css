@@ -167,6 +167,35 @@ h2::after {
     display: block;
 }
 
+h3 {
+    font-size: 1.8em;
+    color: #fe4918;
+    font-family: 'PT-Sans', sans-serif;
+    margin: 0;
+}
+
+.boton {
+    background-color: #fe4918;
+    padding: 10px 40px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all .3 ease;
+}
+
+.boon:hover {
+    background-color: #e33000;
+}
+
+.float.right {
+    float: right;
+}
+
 .seccion {
     padding: 30px;
 }
@@ -393,6 +422,54 @@ header {
         width: 50%;
     }
 }
+
+.menu-programa {
+    width: 100%;
+    border-bottom: 1px solid #fe4918;
+    padding-bottom: 10px;
+}
+
+.menu-programa a {
+    display: block;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+}
+
+@media (min-width:768px) {
+    nav.menu-programa a {
+        display: table-cell;
+    }
+}
+
+.menu-programa a i,
+.detalle-evento p i {
+    font-size: 1.8em;
+    color: #fe4918;
+    margin-right: 10px;
+}
+
+
+/**detalle evento**/
+
+.detalle-evento {
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    padding: 0 20px;
+}
+
+.detalle-evento:nth-child(2) {
+    border-bottom: none;
+}
+
+1 {
+    margin-bottom: 20PX;
+    font-size: 20px;
+}
+
+.detalle-evento h3 {}
 
 
 /* ==========================================================================
