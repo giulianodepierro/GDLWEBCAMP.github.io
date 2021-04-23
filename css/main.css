@@ -202,6 +202,12 @@ ul {
     background-color: #e33000;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .float-right {
     float: right;
 }
@@ -394,14 +400,17 @@ header {
 
 /**Talleres**/
 
-.programa {
+section.programa {
     position: relative;
 }
 
 .contenedor-video {
     max-width: 100%;
     overflow-x: hidden;
+<<<<<<< Updated upstream
     max-height: 100%;
+=======
+>>>>>>> Stashed changes
 }
 
 .contenido-programa {
@@ -443,9 +452,15 @@ header {
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
+    font-size: 1.2em;
+    position: relative;
 }
 
 @media (min-width:768px) {
+    .menu-programa {
+        display: flex;
+        justify-content: space-between;
+    }
     nav.menu-programa a {
         display: table-cell;
     }
@@ -477,20 +492,32 @@ header {
 }
 
 
+<<<<<<< Updated upstream
 /** invitados**/
+=======
+/** Invitados**/
+>>>>>>> Stashed changes
 
 .lista-invitados li {
     padding: 10px;
     float: left;
 }
 
+<<<<<<< Updated upstream
 @media (min-width:480px) {
+=======
+@media (min-width: 480px) {
+>>>>>>> Stashed changes
     .lista-invitados li {
         width: 50%;
     }
 }
 
+<<<<<<< Updated upstream
 @media (min-width:768px) {
+=======
+@media (min-width: 768px) {
+>>>>>>> Stashed changes
     .lista-invitados li {
         width: 33.3%;
     }
@@ -503,6 +530,7 @@ header {
 
 .invitado img {
     max-width: 100%;
+<<<<<<< Updated upstream
     filter: grey;
     -webkit-filter: grayscale();
     -webkit-transition: all .3s ease-in-out;
@@ -514,12 +542,31 @@ header {
     transform: rotate(3deg);
 }
 
+=======
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transform: scale(1.1);
+    -webkit-transition: all .3s ease-in-out;
+}
+
+.invitado img:hover {
+    -webkit-filter: grayscale(0);
+    transform: rotate(3deg);
+}
+
+.invitado:hover p {
+    bottom: -80px;
+    opacity: 0;
+}
+
+>>>>>>> Stashed changes
 .invitado p {
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 15px 10px;
     margin: 0;
+<<<<<<< Updated upstream
     background-color: rgba(0, 0, 0, .6);
     text-align: left;
     width: 100%;
@@ -626,6 +673,16 @@ header {
 .tabla-precios p.numero {
     color: #000000;
     font-size: 4em;
+=======
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Oswald' sans-serif;
+    color: #fe4918;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+>>>>>>> Stashed changes
 }
 
 
