@@ -187,6 +187,15 @@ Author's custom styles
         background-color: #e33000;
     }
     
+    .transparent {
+        background-color: transparent;
+        border-color: #ffffff;
+    }
+    
+    .transparent:hover {
+        border-color: #fe4918;
+    }
+    
     .float-right {
         float: right;
     }
@@ -619,8 +628,9 @@ Author's custom styles
     }
     /**testimoniales*/
     
-    .testimoniales {
+    .seccion .testimoniales {
         padding: 20px;
+        height: 300px;
     }
     
     .testimonial {
@@ -679,10 +689,101 @@ Author's custom styles
     }
     
     .info-testimonial cite span {
-        color: #0000;
+        color: #000000;
         display: block;
         text-transform: none;
         margin-top: 5px;
+    }
+    /**newsletters*/
+    
+    .newsletter {
+        background-image: url(../img/bg-newsletter.jpg);
+        content: '';
+    }
+    
+    .newsletter .contenido {
+        padding: 100px 0;
+        color: #ffffff;
+        text-align: center;
+        position: relative;
+    }
+    
+    .newsletter .contenido p {
+        font-size: 1.2rem;
+        text-transform: lowercase;
+    }
+    
+    .newsletter .contenido h3 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 7vw;
+        font-family: 'PT-Sans', serif;
+    }
+    /**Cuenta regresiva*/
+    
+    .cuenta-regresiva ul li {
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .cuenta-regresiva .numero {
+        font-size: 4em;
+    }
+    
+    @media (min-width: 768px) {
+        .cuenta-regresiva ul li {
+            width: 25%;
+            float: left;
+        }
+    }
+    /**Footer**/
+    
+    footer {
+        background-color: #353535;
+        padding-top: 40px;
+        margin-top: 20 px;
+    }
+    
+    footer .contenedor>div {
+        color: #ffffff;
+        padding: 0px 20px;
+        font-size: 12px;
+    }
+    
+    @media (min-width: 768px) {
+        footer .contenedor>div {
+            width: 33.3%;
+            float: left;
+        }
+    }
+    
+    footer h3 {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 20px;
+    }
+    
+    footer h3 span {
+        color: #fe4918;
+    }
+    
+    footer .ultimos-tweets li {
+        margin-bottom: 10px;
+    }
+    
+    footer nav .redes-sociales {
+        text-align: left;
+    }
+    
+    footer .copyright {
+        background-color: #2e2e2e;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        margin: 20PX 0 0 0;
     }
     /* ==========================================================================
 Helper classes
