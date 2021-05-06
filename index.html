@@ -381,7 +381,7 @@
                     <div id="viernes" class="contenido-dia clearfix">
                         <h4>Viernes</h4>
                         <div>
-                            <p>Talleres:</p>
+                            <p class="eve">Talleres:</p>
                             <label><input type="checkbox" name="registro[]" id="taller_01" value="taller_01"><time>10:00</time> Responsive Web Design</label>
                             <label><input type="checkbox" name="registro[]" id="taller_02" value="taller_02"><time>12:00</time> Flexbox</label>
                             <label><input type="checkbox" name="registro[]" id="taller_03" value="taller_03"><time>14:00</time> HTML5 y CSS3</label>
@@ -389,13 +389,13 @@
                             <label><input type="checkbox" name="registro[]" id="taller_05" value="taller_05"><time>19:00</time> WordPress</label>
                         </div>
                         <div>
-                            <p>Conferencias:</p>
+                            <p class="eve">Conferencias:</p>
                             <label><input type="checkbox" name="registro[]" id="conf_01" value="conf_01"><time>10:00</time> Como ser Freelancer</label>
                             <label><input type="checkbox" name="registro[]" id="conf_02" value="conf_02"><time>17:00</time> Tecnologías del Futuro</label>
                             <label><input type="checkbox" name="registro[]" id="conf_03" value="conf_03"><time>19:00</time> Seguridad en la Web</label>
                         </div>
                         <div>
-                            <p>Seminarios:</p>
+                            <p class="eve">Seminarios:</p>
                             <label><input type="checkbox" name="registro[]" id="sem_01" value="sem_01"><time>10:00</time> Diseño UI y UX para móviles</label>
                         </div>
                     </div>
@@ -451,8 +451,53 @@
                 <!--.caja-->
             </div>
             <!--#eventos-->
+            <div id="resumen" class="resumen"></div>
+            <h3>Pago y Extras</h3>
+            <div class="caja clearfix">
+                <div class="extras">
+                    <div class="orden">
+                        <label for="camisa_evenmo">Camisa del evento $10 <small>(promocion 7% dto.)</small></label>
+                        <input type="number " min="0" id="etiquetas" size="3" placeholder="0">
+                    </div>
+                    <!---orden-->
+                    <div class="orden">
+                        <label for="regalo">Selecion un regalo</label>
+                        <select id="regalo" required>
+                                <option value="">Selecione un regalo</option>
+                                <option value="ETI">Etiquetas</option>
+                                <option value="PUL">Pulsera</option>
+                                <option value="PLU">Plumas</option>
+                            </select>
+
+                    </div>
+                    <!---orden---->
+                    <input type="button" id="calcular" class="boton" value="calcular">
+
+
+
+
+
+                </div>
+                <!--extras-->
+                <div class="total">
+                    <p>Resumen:</p>
+                    <div id="lista-productos">
+
+                    </div>
+                    <p>Total:</p>
+                    <input type="submit" id="btnRegistro" class="boton" value="Pagar">
+                </div>
+                <!--total-->
+            </div>
+            <!--caja-->
+            </div>
+            <!--resumen-->
         </form>
     </section>
+
+
+
+
 
     <footer class="site-footer">
         <div class="contenedor clearfix">
@@ -492,7 +537,6 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
         window.ga = function() {
