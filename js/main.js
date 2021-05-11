@@ -18,7 +18,7 @@
         var calcular = document.getElementById('calcular');
         var errorDiv = document.getElementById('errorDiv');
         var botonRegistro = document.getElementById('btnRegistro');
-        var resutado = document.getElementById('lista_productos');
+        var lista_productos = document.getElementById('lista_productos');
         //EXTRAS
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiqueta');
@@ -32,13 +32,48 @@
                 regalo.focus();
 
             } else {
-                var boletosDia = pase_dia.value,
-                    boletos2Dias = pase_dosdias.value,
-                    boletoCompleto = pase_completo.value
-                cantCamisas = camisas.value,
-                    cantEtiquetas = etiquetas.value;
-                var totalPagar = (boletosDia * 30) + (boletos2Dias * 45) + (boletoCompleto * 50) + (cantCamisas * 10) + (cantEtiquetas * 0.93);
+                var boletosDia = parseInt(pase_dia.value, 10) || 0,
+                    boletos2Dias = parseInt(pase_dosdias.value, 10) || 0,
+                    boletoCompleto = parseInt(pase_completo.value, 10) || 0,
+                    cantCamisas = parseInt(camisas.value, 10) || 0,
+                    cantEtiquetas = parseInt(etiquetas.value, 10) || 0;
+
+                var totalPagar = (boletosDia * 30) + (boletos2Dias * 45) + (boletoCompleto * 50) + ((cantCamisas * 10) * .93);
                 console.log(totalPagar);
+
+                var listadoProductos = [];
+                if (boletosDia >= 1) {
+                    listadoProductos.push(boletosDia + ' Pases por dia');
+                }
+
+                if (boletos2Dias >= 1) {
+                    listadoProductos.push(boletos2Dias + ' Pases por dos dias');
+                }
+
+                if (boletoCompleto >= 1) {
+                    listadoProductos.push(boletoCompleto + ' Pase completo');
+                }
+
+
+                if (cantCamisas >= 1) {
+                    listadoProductos.push(cantCamisas + ' Camisas');
+                }
+
+
+                if (cantEtiquetas >= 1) {
+                    listadoProductos.push(cantEtiquetas + ' Etiquetas');
+                }
+                console.log(listadoProductos);
+
+                lista_productos.innerHTML = '';
+
+                var i = 0;
+
+                for (i; i < listadoProductos.length; i++) {
+                    lista_productos.innerHTML += listadoProductos[i] + '<br/>';
+                }
+
+
             }
 
         }
