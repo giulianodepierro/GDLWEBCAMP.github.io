@@ -326,8 +326,9 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Tu Email">
                 </div>
-                <div class="error"></div>
             </div>
+            <div id="errorDiv"></div>
+
 
             <!--fin datos de usuarios-->
 
@@ -451,48 +452,46 @@
                 <!--.caja-->
             </div>
             <!--#eventos-->
-            <div id="resumen" class="resumen"></div>
-            <h3>Pago y Extras</h3>
-            <div class="caja clearfix">
-                <div class="extras">
-                    <div class="orden">
-                        <label for="camisa_evento">Camisa del evento $10 <small>(promocion 7% dto.)</small></label>
-                        <input type="number " min="0" id="camisa_evento" size="3" placeholder="0">
-                        <label for="etiqueta">Etiquetas del evento $10 </label>
-                        <input type="number " min="0" id="etiqueta" size="3" placeholder="0">
+            <div id="resumen" class="resumen">
+                <h3>Pago y Extras</h3>
+                <div class="caja clearfix">
+                    <div class="extras">
+                        <div class="orden">
+                            <label for="camisa_evento">Camisa del evento $10 <small>(promocion 7% dto.)</small></label>
+                            <input type="number " min="0" id="camisa_evento" size="3" placeholder="0">
+                            <label for="etiqueta">Etiquetas del evento $10 </label>
+                            <input type="number " min="0" id="etiqueta" size="3" placeholder="0">
 
-                    </div>
-                    <!---orden-->
-                    <div class="orden">
-                        <label for="regalo">Selecion un regalo</label>
-                        <select id="regalo" required>
+                        </div>
+                        <!---orden-->
+                        <div class="orden">
+                            <label for="regalo">Selecion un regalo</label>
+                            <select id="regalo" required>
                                 <option value="">Selecione un regalo</option>
                                 <option value="ETI">Etiquetas</option>
                                 <option value="PUL">Pulsera</option>
                                 <option value="PLU">Plumas</option>
                             </select>
 
+                        </div>
+                        <!---orden---->
+                        <input type="button" id="calcular" class="boton" value="calcular">
                     </div>
-                    <!---orden---->
-                    <input type="button" id="calcular" class="boton" value="calcular">
+                    <!--extras-->
+                    <div class="total">
+                        <p>Resumen:</p>
+                        <div id="lista_productos">
 
+                        </div>
+                        <p>Total:</p>
+                        <div id="suma_total">
 
-
-
-
-                </div>
-                <!--extras-->
-                <div class="total">
-                    <p>Resumen:</p>
-                    <div id="lista_productos">
-
+                        </div>
+                        <input type="submit" id="btnRegistro" class="boton" value="Pagar">
                     </div>
-                    <p>Total:</p>
-                    <input type="submit" id="btnRegistro" class="boton" value="Pagar">
+                    <!--total-->
                 </div>
-                <!--total-->
-            </div>
-            <!--caja-->
+                <!--caja-->
             </div>
             <!--resumen-->
         </form>

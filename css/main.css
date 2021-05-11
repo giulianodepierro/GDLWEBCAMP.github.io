@@ -816,6 +816,10 @@ Author's custom styles
         padding: 20px;
     }
     
+    .campo input {
+        border: 1px solid #8a6666;
+    }
+    
     @media (min-width:768px) {
         .campo {
             float: left;
@@ -837,7 +841,7 @@ Author's custom styles
     
     .contenido-dia {
         padding: 20px;
-        /*displat:none;*/
+        display: none;
     }
     
     @media(min_width:767px) {
@@ -863,6 +867,41 @@ Author's custom styles
     .contenido-dia>div label time {
         color: #fe4918;
         font-weight: bold;
+    }
+    
+    .caja {
+        display: flex;
+    }
+    
+    .orden .extras {
+        display: flex;
+    }
+    
+    .orden label {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    #lista_productos {
+        background-color: #e1e1e1;
+        padding: 28px;
+        display: none;
+    }
+    
+    #suma_total {
+        text-align: center;
+        font-size: 2em;
+        color: #fe4918;
+    }
+    
+    #errorDiv {
+        clear: both;
+        padding: 20px;
+        display: none;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bolder;
+        background-color: #e2856b;
     }
     /* ==========================
     ================================================

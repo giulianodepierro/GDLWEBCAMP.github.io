@@ -14,17 +14,84 @@
         var pase_dia = document.getElementById('pase_dia');
         var pase_dosdias = document.getElementById('pase_dosdias');
         var pase_completo = document.getElementById('pase_completo');
+
         // botones y divs
         var calcular = document.getElementById('calcular');
         var errorDiv = document.getElementById('errorDiv');
         var botonRegistro = document.getElementById('btnRegistro');
         var lista_productos = document.getElementById('lista_productos');
+        var suma = document.getElementById('suma_total');
+
         //EXTRAS
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiqueta');
+
         calcular.addEventListener('click', calcularMontos);
 
+        pase_dia.addEventListener('blur', mostrarDia);
+        pase_dosdias.addEventListener('blur', mostrarDia);
+        pase_completo.addEventListener('blur', mostrarDia);
 
+
+        /**------------------------------funciones-------------------- */
+        //validaciones nombre
+
+        nombre.addEventListener('blur', validarCampos);
+        //validaciones apellido        
+        apellido.addEventListener('blur', validarCampos);
+
+        //validar mail
+        email.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarMail);
+
+        function validarCampos() {
+            if (this.value == "") {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = "Este campo es obligatorio";
+                this.style.border = '1px solid red';
+
+            } else {
+                errorDiv.style.display = 'none';
+                this.style.border = '1px solid #8a6666';
+            }
+        };
+
+
+        function validarMail() {
+            if (this.value.indexOf("@") > -1) {
+                errorDiv.style.display = 'none';
+                this.style.border = '1px solid #8a6666';
+            } else {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = "Debe tener un  @s";
+                this.style.border = '1px solid red';
+
+            }
+        };
+        //validaciones nombre
+
+        // nombre.addEventListener('blur', function() {
+        //     if (this.value == "") {
+        //         errorDiv.style.display = 'block';
+        //         errorDiv.innerHTML = 
+        //         this.style.border = '1px solid red';
+        //         errorDiv.style.border = '1px solid red';
+
+        //     }
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+        /**-----------------------------calcular montos-------------------- */
         function calcularMontos(event) {
             event.preventDefault();
             if (regalo.value === '') {
@@ -73,9 +140,36 @@
                     lista_productos.innerHTML += listadoProductos[i] + '<br/>';
                 }
 
-
+                //crea objeto lista_productos
+                lista_productos.style.display = "block";
+                suma.innerHTML = '$ ' + totalPagar.toFixed(2);
             }
 
+        }
+
+        function mostrarDia() {
+
+            var boletosDia = parseInt(pase_dia.value, 10) || 0,
+                boletos2Dias = parseInt(pase_dosdias.value, 10) || 0,
+                boletoCompleto = parseInt(pase_completo.value, 10) || 0;
+
+            var diasElegidos = [];
+
+            if (boletosDia > 0) {
+                diasElegidos.push('viernes');
+            }
+
+            if (boletos2Dias > 0) {
+                diasElegidos.push('viernes', 'sabado');
+            }
+
+            if (boletoCompleto > 0) {
+                diasElegidos.push('viernes', 'sabado', 'domingo');
+            }
+
+            for (var i = 0; i > diasElegidos.length; i++) {
+                document.getElementById(diasElegidos).style.display = 'block';
+            }
         }
     }); //DOM content loaded
 })();
