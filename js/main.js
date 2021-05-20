@@ -1,8 +1,32 @@
 (function() {
     "use strict";
 
+
+
+
+
+
     var regalo = document.getElementById('regalo')
     document.addEventListener('DOMContentLoaded', function() {
+
+        //mapa
+        var map = L.map('mapa').setView([-34.566196, -60.935948], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-34.566196, -60.935948]).addTo(map)
+            .bindPopup('GLDWebCamp 2018<br> Boletos Disponibles.')
+            .openPopup()
+            .bindTooltip('Un Tooltop')
+            .openTooltip();
+
+
+
+
+
+
 
         //Datos uusuario
         var nombre = document.getElementById('nombre');
