@@ -2,28 +2,8 @@
     "use strict";
 
 
-
-
-
-
     var regalo = document.getElementById('regalo')
     document.addEventListener('DOMContentLoaded', function() {
-
-        //mapa
-        var map = L.map('mapa').setView([-34.566196, -60.935948], 13);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([-34.566196, -60.935948]).addTo(map)
-            .bindPopup('GLDWebCamp 2018<br> Boletos Disponibles.')
-            .openPopup()
-            .bindTooltip('Un Tooltop')
-            .openTooltip();
-
-
-
 
 
 
@@ -92,24 +72,6 @@
 
             }
         };
-        //validaciones nombre
-
-        // nombre.addEventListener('blur', function() {
-        //     if (this.value == "") {
-        //         errorDiv.style.display = 'block';
-        //         errorDiv.innerHTML = 
-        //         this.style.border = '1px solid red';
-        //         errorDiv.style.border = '1px solid red';
-
-        //     }
-        // });
-
-
-        $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6 }, 1200);
-        $('.resumen-evento li:nth-child(2) p').animateNumber({ number: 9 }, 1200);
-        $('.resumen-evento li:nth-child(3) p').animateNumber({ number: 3 }, 1500);
-        $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 15 }, 1200);
-
 
 
 
@@ -194,7 +156,45 @@
                 document.getElementById(diasElegidos).style.display = 'block';
             }
         }
+        var map = L.map('mapa').setView([-34.566196, -60.935948], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-34.566196, -60.935948]).addTo(map)
+            .bindPopup('GLDWebCamp 2018<br> Boletos Disponibles.')
+            .openPopup()
+            .bindTooltip('Un Tooltop')
+            .openTooltip();
+
+
+
+        //contador 
+
+        $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6 }, 1200);
+        $('.resumen-evento li:nth-child(2) p').animateNumber({ number: 9 }, 1200);
+        $('.resumen-evento li:nth-child(3) p').animateNumber({ number: 3 }, 1500);
+        $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 15 }, 1200);
+
+
+
+        //Cuenta regresiva 
+        $('.cuenta-regresiva').countdown('2021/10/28 09:00:00', function(event) {
+            $('#dias').html(event.strftime('%D'));
+            $('#horas').html(event.strftime('%H'));
+            $('#minutos').html(event.strftime('%M'));
+            $('#segundos').html(event.strftime('%S'));
+        });
+
+
 
 
     }); //DOM content loaded
+
+
+
+
+    //Contador     
+
 })();
