@@ -208,6 +208,59 @@ Author's custom styles
         font-size: 1.2em;
         text-align: center;
     }
+    /*}lettering */
+    
+    .nombre-sitio span {
+        position: relative;
+        text-shadow: 0 0 30px #000;
+    }
+    
+    @media only screen and (min-width:768px) {
+        .char1 {
+            top: 20px;
+            right: 30px;
+            color: #fe4918;
+        }
+        .char2 {
+            top: 0px;
+            left: -20px;
+        }
+        .char3 {
+            top: 10px;
+            right: 20px;
+        }
+        .char4 {
+            top: 10px;
+            right: 10px;
+            color: #fe4918;
+        }
+        .char5 {
+            top: 15px;
+            right: 10px;
+        }
+        .char6 {
+            top: 5px;
+            right: 10px;
+        }
+        .char7 {
+            top: 20px;
+            right: -10px;
+            color: #fe4918;
+        }
+        .char8 {
+            top: 0;
+            left: 10px;
+        }
+        .char9 {
+            top: 10px;
+            right: 20px;
+        }
+        .char10 {
+            top: 20px;
+            right: 20px;
+        }
+    }
+    /* header */
     
     header {
         background-image: url(../img/encabezado.jpg);

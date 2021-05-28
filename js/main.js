@@ -7,6 +7,9 @@
 
 
 
+        // lettering 
+
+        $('.nombre-sitio').lettering();
 
         //Datos uusuario
         var nombre = document.getElementById('nombre');
