@@ -11,6 +11,37 @@
 
         $('.nombre-sitio').lettering();
 
+        // Menu fijo
+
+        var windowHeight = $(window).height();
+        var barraAltura = $('.barra').innerHeight()
+
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll > windowHeight) {
+                //**llego a la barrA */
+                $('.barra').addClass('fixed');
+                $('body').css({ 'margin-top': barraAltura + 'px' });
+
+            } else {
+                $('.barra').removeClass('fixed');
+                $('body').css({ 'margin-top': '0px' });
+            }
+        });
+
+
+
+        // Menu Responsive
+
+        $('.menu-movil').on('click', function() {
+            $('.navegacion-principal').slideToggle();
+        });
+
+
+
+
+
         //Datos uusuario
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido');
@@ -159,6 +190,14 @@
                 document.getElementById(diasElegidos).style.display = 'block';
             }
         }
+
+
+
+
+
+
+
+
         var map = L.map('mapa').setView([-34.566196, -60.935948], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
